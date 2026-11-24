@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101a2a" />
+  <title>proyecto-sgie</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><span class="identity"><span class="identity-mark">OC</span> proyecto-sgie</span><span class="tag">OpenCode + VS Code</span></header>
+    <section class="intro">
+      <p class="eyebrow">Proyecto de validación</p>
+      <h1>Tu entorno de desarrollo,<br /><span>listo para construir.</span></h1>
+      <p class="description">Una app real y ligera para comprobar el editor, el agente IA, Git, las pruebas automáticas y el despliegue.</p>
+    </section>
+    <section class="board" aria-label="Gestor de tareas">
+      <div class="board-header"><div><p class="eyebrow">Tablero de trabajo</p><h2>Mis tareas</h2></div><div class="counter" id="task-count" aria-live="polite">0 pendientes</div></div>
+      <form id="task-form" class="add-form"><label for="task-input" class="sr-only">Nueva tarea</label><input id="task-input" type="text" placeholder="¿Qué quieres desarrollar?" maxlength="120" autocomplete="off" required /><button type="submit">Añadir tarea <span aria-hidden="true">+</span></button></form>
+      <p id="form-feedback" class="feedback" role="status"></p>
+      <ul id="task-list" class="task-list" aria-label="Lista de tareas"></ul>
+      <p class="footer-note">Las tareas se guardan únicamente en este navegador (localStorage).</p>
+    </section>
+    <footer class="site-footer">Laboratorio de IA para desarrollo web · <span id="current-year"></span></footer>
+  </main>
+  <script type="module" src="./src/app.mjs"></script>
+</body>
+</html>
